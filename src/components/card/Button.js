@@ -12,24 +12,24 @@ const TextButton = (props) => {
   );
 
   return (
-    <section>
+    <div className="container-card">
       <button
         onClick={() => (eGatinho ? setUrl(urlCat) : setUrl(urlDog))}
-        className="card"
+        className="card-button"
       >
         {props.text}
       </button>
       <img src={url} className="card-img" />
-    </section>
+    </div>
   );
 };
 
 function Button() {
   return (
-    <div>
+    <section className="container">
       <TextButton text="Gerar Gatinho" />
       <TextButton text="Gerar Cachorrinho" />
-    </div>
+    </section>
   );
 }
 

@@ -1,0 +1,30 @@
+.container {
+  display: grid;
+  justify-items: center;
+}
+
+.container-card {
+  display: grid;
+  justify-items: center;
+}
+
+.card-button {
+  background-color: #fec700;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  padding: 1rem;
+  width: 250px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.card-img {
+  display: block;
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
