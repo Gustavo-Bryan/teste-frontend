@@ -1,6 +1,7 @@
 .container {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 .container-card {

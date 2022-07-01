@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import './style.css';
 
-const TextButton = (props) => {
-  const randomNumber = Math.floor(Math.random() * (1000 - 300 + 1) + 300);
-  const eGatinho = props.text == 'Gerar Gatinho';
+const SectionCard = (props) => {
+  const randomNumber = Math.floor(Math.random() * (500 - 300 + 1) + 300);
+  const isCat = props.text == 'Gerar Gatinho';
   const urlCat = `https://placekitten.com/${randomNumber}/${randomNumber}`;
   const urlDog = `https://place.dog/${randomNumber}/${randomNumber}`;
 
   const [url, setUrl] = useState(
-    eGatinho ? `https://placekitten.com/300/300` : `https://place.dog/300/300`,
+    isCat ? `https://placekitten.com/300/300` : `https://place.dog/300/300`,
   );
 
   return (
     <div className="container-card">
       <button
-        onClick={() => (eGatinho ? setUrl(urlCat) : setUrl(urlDog))}
+        onClick={() => (isCat ? setUrl(urlCat) : setUrl(urlDog))}
         className="card-button"
       >
         {props.text}
       </button>
-      <img src={url} className="card-img" />
+      <img src={url} className="card-img" alt="Imagem de um pet" />
     </div>
   );
 };
@@ -27,8 +27,8 @@ const TextButton = (props) => {
 function Button() {
   return (
     <section className="container">
-      <TextButton text="Gerar Gatinho" />
-      <TextButton text="Gerar Cachorrinho" />
+      <SectionCard text="Gerar Gatinho" />
+      <SectionCard text="Gerar Cachorrinho" />
     </section>
   );
 }
